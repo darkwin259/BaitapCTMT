@@ -21,12 +21,6 @@ inc di
 inc dh 
 mov ah,2
 int 10h
-mov dl, 0Ah 
-int 21h  
-mov al,1
-mov bh,0
-mov bl,01001111b 
-mov cx,1 
 lea bp,str+di
 mov ah,13h
 int 10h
@@ -35,3 +29,5 @@ jnz lap
 je endss
 str db 'Lop ten lua k57'
 endss:
+mov ah,4ch
+int 21h
